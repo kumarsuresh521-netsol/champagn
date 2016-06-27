@@ -1,0 +1,24 @@
+{% load staticfiles %}
+{% block parent %}
+    {% block child %}
+ {% block content %}
+<section class="datapage">  
+  <div class="container">
+    <div class="row">
+	<p>Hello {{user.name}}</p>
+	<p>Welcome to VIP Fizz App. You can start the exciting journey of personalizing champagne for your loved ones.</p> 
+	<p>Your registered email address: ({{user.email}})</p>
+	<p>In case you forget your password, you can reset at (<a href="{{ user.protocol }}://{{ user.domain }}{% url 'password_reset' %}"  style="font-weight:bold; font-size:15px"> {{ user.protocol }}://{{ user.domain }}{% url 'password_reset' %}</a>)</p>
+	<p>For any Queries please contact Admin on email -  <a href="email:admin@vipfizz.com">admin@vipfizz.com</a></p>
+	<br/>
+	<p>Thanks</p> 
+	<p>VIP Fizz Team</p>
+	</div>
+	</div>
+</section>
+{% endblock %}
+ {% endblock child%}
+{% endblock parent %}
+
+
+

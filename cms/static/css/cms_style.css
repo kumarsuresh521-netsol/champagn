@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'NeutraText-Demi';
+  src: url('../fonts/NeutraText-Demi.eot?#iefix') format('embedded-opentype'),  url('../fonts/NeutraText-Demi.otf')  format('opentype'),
+	     url('../fonts/NeutraText-Demi.woff') format('woff'), url('../fonts/NeutraText-Demi.ttf')  format('truetype'), url('../fonts/NeutraText-Demi.svg#NeutraText-Demi') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeutraText-Bold';
+  src: url('../fonts/NeutraText-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/NeutraText-Bold.otf')  format('opentype'),
+	     url('../fonts/NeutraText-Bold.woff') format('woff'), url('../fonts/NeutraText-Bold.ttf')  format('truetype'), url('../fonts/NeutraText-Bold.svg#NeutraText-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeutraText-Book';
+  src: url('../fonts/NeutraText-Book.eot?#iefix') format('embedded-opentype'),  url('../fonts/NeutraText-Book.otf')  format('opentype'),
+	     url('../fonts/NeutraText-Book.woff') format('woff'), url('../fonts/NeutraText-Book.ttf')  format('truetype'), url('../fonts/NeutraText-Book.svg#NeutraText-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{ margin:0; padding:0;box-sizing: border-box;}
+body{ background:url(../images/background.jpg) center center no-repeat #906022; background-size:cover; font-family: 'NeutraText-Book'; color:#fff;}
+
+.wrapper{ max-width:767px; width:100%; margin:10px auto 0;}
+.logo{ text-align:center; margin-top:10px;}
+.logo img{ max-width:120px;}
+.site-branding{ width:100%; float:left; padding: 10px 26px 10px 26px;}
+.site-branding h1{ color:#fff; font-family: 'NeutraText-Bold'; font-weight:normal; font-size:74px; line-height:70px; text-transform:uppercase;}
+.site-branding h1 span { display:block;font-family: 'NeutraText-Book'; font-size:26px;  font-weight:normal; line-height:26px; text-transform:none;}
+.site-branding p{ width:100%; float:left; display:block;font-family: 'NeutraText-Book'; font-size:26px; font-weight:normal; line-height:26px; color:#fff; }
+.forget-form{ width:80%; margin:2% 10%; display:block; background:#a8722d; border:1px solid #a06e2d; border-radius:5px; padding:15px 25px;}
+hr{ margin:15px 0; border: 1px solid #c39d6c;}
+
+
+::-webkit-input-placeholder {
+   color: #fff; opacity:1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff; opacity:1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff; opacity:1;  
+}
+
+:-ms-input-placeholder {  
+   color: #fff; opacity:1;  
+}
+
+
+@media(max-width:500px){
+.site-branding h1{ font-size:42px; line-height:44px;}
+.site-branding h1 span{ font-size:18px; line-height:20px;}
+.site-branding p{ font-size:14px; line-height:24px;}
+}

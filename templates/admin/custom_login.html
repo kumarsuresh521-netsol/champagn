@@ -1,0 +1,16 @@
+{% extends "admin/login.html" %}
+{% load i18n admin_static %}
+
+
+
+{% block content %}
+{{ block.super }}
+<script type="text/javascript">
+	var anchor = $('#login-form').find("a");
+	anchor.html("<div style=\"float:left;margin-left:-28% !important;\">Forgot password? <br/> <br/></div>");
+</script>
+{% endblock %}
+
+{% block branding %}
+<h4 id="site-name" style="color: #5E5E5E;background-color: transparent; line-height: 1.42857; !important;\">{% trans 'The ChampagnFizz Admininstration' %}</h4>
+{% endblock %}

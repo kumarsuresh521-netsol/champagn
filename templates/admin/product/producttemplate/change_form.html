@@ -1,0 +1,17 @@
+{% extends "admin/change_form.html" %}
+{% block extrahead %}{{ block.super }}
+    <script>
+    $(document).ready(function(){
+    	var preview_id = window.location.pathname.split('/'); 
+    	
+    	var hostname =  window.location.hostname;
+    	var port =  window.location.port;
+    	
+    	var url = 'http://' + hostname + ':' +  port + '/previewtemplate/' + preview_id[4] + '/';
+    	$( ".btn-default:first" ).before( "<a href='"+ url +"' target='_blank' class='btn btn-primary default' style='margin-right: 5px;' > Preview Template </a>" );
+    })
+
+   
+     </script>
+{% endblock %}
+{% load i18n admin_urls %}

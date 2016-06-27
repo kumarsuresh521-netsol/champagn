@@ -1,0 +1,12 @@
+<div style="color: #5E5E5E; text-align: center; font-size: 26px; width: 100%; background: #f8f8f8; padding: 10px 0 10px 0; margin: -10px -10px 15px -10px; border-bottom: 2px solid #e7e7e7;">Template Preview</div>
+<div style="background:url('http://{{request.get_host}}/static/{{ product_template.image_name.url }}') no-repeat; position:relative; margin: 0 auto; width:860px; height:622px;">
+	{% for data in product_template_data %}
+	    <div style="left: {{ data.left }}; top: {{ data.top }}px; position: absolute; "> 
+	    	{% if data.device_type == 1 %}
+	    		<img style="height: {{ data.height }}px; width: {{ data.width }}px;" src="http://{{request.get_host}}/static/{{ data.default_image }}" />
+	    	{% else %}
+	    		<p style="height: {{ data.height }}px; width: {{ data.width }}px; word-wrap: break-word;">{{ data.default_text }}</p> 
+	    	{% endif %}
+	    </div>
+	{% endfor %}
+</div>
